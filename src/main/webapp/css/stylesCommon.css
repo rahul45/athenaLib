@@ -4,7 +4,9 @@
 	text-align: center;
 	background-color: #00bfff;
 }
-
+._ind_header_space{
+	height: 200px;
+}
 .loginMain {
 	background-image: url("../images/lib.jpg");
 	background-size: 100% 100%;
