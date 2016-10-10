@@ -12,6 +12,7 @@ public class Student {
 	private String lastName;
 	private String fatherName;
 	private String contactNumber;
+	private String email;
 	private String typeOfProofId;
 	private SHIFT slot;
 	private boolean isFeeDeposit;
@@ -21,6 +22,12 @@ public class Student {
 	private int seatNumber;
 	
 	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public boolean isFeeDeposit() {
 		return isFeeDeposit;
 	}

@@ -45,7 +45,8 @@ public class StudentJDBCTemplate {
 
 		System.out.println("Created Record Name = " + student.getFirstName() + " Serial id = " + student.getSerialId());
 		return "Created Record Name = " + student.getFirstName() + " Serial id = " + student.getSerialId();
-	}/*
+	}
+	/*
 		 * create table student(std_id varchar(20) not null primary key,
 		 * firstname varchar(50) not null, lastname varchar(50) , father_name
 		 * varchar(50), contact_number varchar(10) not null, type_of_proof_id
