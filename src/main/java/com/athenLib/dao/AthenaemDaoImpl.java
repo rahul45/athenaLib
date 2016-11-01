@@ -12,6 +12,7 @@ import com.athenLib.utils.ObjectFactory;
 public class AthenaemDaoImpl implements AthenaemDao {
 
 	public String addStudent(Student student) throws SQLException {
+		
 		String response = null;
 		try {
 			response = ObjectFactory.getStudentJDBCTemplate().add(student);

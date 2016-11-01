@@ -16,7 +16,7 @@ public class Student {
 	private String typeOfProofId;
 	private SHIFT slot;
 	private boolean isFeeDeposit;
-	private String feeDepositionStatus;
+	private double feeAmount;
 	private Date dateOfJoining;
 	private Date expirationDate;
 	private int seatNumber;
@@ -76,12 +76,7 @@ public class Student {
 	public void setSlot(SHIFT slot) {
 		this.slot = slot;
 	}
-	public String getFeeDepositionStatus() {
-		return feeDepositionStatus;
-	}
-	public void setFeeDepositionStatus(String feeDepositionStatus) {
-		this.feeDepositionStatus = feeDepositionStatus;
-	}
+	
 	public Date getDateOfJoining() {
 		return dateOfJoining;
 	}
@@ -100,19 +95,20 @@ public class Student {
 	public void setSeatNumber(int seatNumber) {
 		this.seatNumber = seatNumber;
 	}
+	public double getFeeAmount() {
+		return feeAmount;
+	}
+	public void setFeeAmount(double feeAmount) {
+		this.feeAmount = feeAmount;
+	}
 	@Override
 	public String toString() {
 		return "Student [serialId=" + serialId + ", firstName=" + firstName + ", lastName=" + lastName + ", fatherName="
-				+ fatherName + ", contactNumber=" + contactNumber + ", typeOfProofId=" + typeOfProofId + ", slot="
-				+ slot + ", isFeeDeposit=" + isFeeDeposit + ", feeDepositionStatus=" + feeDepositionStatus
+				+ fatherName + ", contactNumber=" + contactNumber + ", email=" + email + ", typeOfProofId="
+				+ typeOfProofId + ", slot=" + slot + ", isFeeDeposit=" + isFeeDeposit + ", feeAmount=" + feeAmount
 				+ ", dateOfJoining=" + dateOfJoining + ", expirationDate=" + expirationDate + ", seatNumber="
-				+ seatNumber + ", isFeeDeposit()=" + isFeeDeposit() + ", getSerialId()=" + getSerialId()
-				+ ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName() + ", getFatherName()="
-				+ getFatherName() + ", getContactNumber()=" + getContactNumber() + ", getTypeOfProofId()="
-				+ getTypeOfProofId() + ", getSlot()=" + getSlot() + ", getFeeDepositionStatus()="
-				+ getFeeDepositionStatus() + ", getDateOfJoining()=" + getDateOfJoining() + ", getExpirationDate()="
-				+ getExpirationDate() + ", getSeatNumber()=" + getSeatNumber() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+				+ seatNumber + "]";
 	}
+	
 	
 }

@@ -1,6 +1,7 @@
 package com.athenLib.services;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import com.athenLib.model.Student;
@@ -12,6 +13,8 @@ public class AthenaeumServicesImpl implements AthenaeumServices {
 	public String addStudent(Student student) {
 		String response = null;
 		try {
+			
+			
 			response = ObjectFactory.getAthenaemDao().addStudent(student);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -59,13 +62,13 @@ public class AthenaeumServicesImpl implements AthenaeumServices {
 
 		AthenaeumServices athenaeumServices = new AthenaeumServicesImpl();
 		// System.out.println("Response:::" +
-		// athenaeumServices.addStudent(getStudent()));
-		/*for (Student s : athenaeumServices.getallStudent()) {
-			System.out.println(s.toString());
-		}*/
-		for (Student s : athenaeumServices.searchStudent("ATH01", null,0)) {
+		 athenaeumServices.addStudent(getStudent());
+		for (Student s : athenaeumServices.getallStudent()) {
 			System.out.println(s.toString());
 		}
+		/*for (Student s : athenaeumServices.searchStudent("ATH01", null,0)) {
+			System.out.println(s.toString());
+		}*/
 	}
 
 	private static Student getStudent() {
@@ -78,6 +81,7 @@ public class AthenaeumServicesImpl implements AthenaeumServices {
 		s.setFatherName("Surendra");
 		s.setSeatNumber(12);
 		s.setFeeDeposit(true);
+		s.setDateOfJoining(new Date());
 		s.setSlot(SHIFT.EVENING);
 		s.setTypeOfProofId("voter");
 		return s;
